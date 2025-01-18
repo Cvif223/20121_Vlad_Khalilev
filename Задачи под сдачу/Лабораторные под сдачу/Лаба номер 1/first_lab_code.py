@@ -19,4 +19,7 @@ def recursion_comb(index = 1, final = f"{Xs[0]}", summ_for_now = Xs[0]):
     if s2 is not None:
         #print(final, "2")
         return s2
-print(recursion_comb())
+if recursion_comb() is not None:
+    print(recursion_comb())
+else:
+    print("no solution")
