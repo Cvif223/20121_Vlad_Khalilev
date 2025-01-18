@@ -1,4 +1,4 @@
-f = open("Input").readline()
+f = open("Input.txt").readline()
 a = [int(x) for x in f.split(" ")]
 Xs = a[1:-1]
 N = a[0]
