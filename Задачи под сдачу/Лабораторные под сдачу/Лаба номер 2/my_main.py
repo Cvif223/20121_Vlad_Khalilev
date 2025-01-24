@@ -118,3 +118,4 @@ def place_figures(chessboard, L, current_solution=[]):
 
 # Запуск размещения фигур
 place_figures(chessboard, L)
+file.close()
