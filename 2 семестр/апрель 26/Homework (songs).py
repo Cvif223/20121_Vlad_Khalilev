@@ -22,8 +22,10 @@ class Album:
         self._tracks.append(Song(title, self._artist, self, self._track_num))
 
     def get_song(self, name: str):
-        return next((song for song in self._tracks if song.get_song_name() == name), None)
-
+        song = next((song for song in self._tracks if song.get_song_name() == name), None)
+        if song is None:
+            print(f"трека {name} нет в альбоме {self._title}")
+        else: return song
     def __repr__(self):
         return f"Album: {self._title}, artist: {self._artist}, tracks: {self._tracks}"
 
@@ -68,4 +70,5 @@ if __name__ == "__main__":
     print(album_1)
     my_playlist = Playlist("Hardbass")
     my_playlist.add_song(album_1.get_song("Bombordilo"))
+    my_playlist.add_song(album_1.get_song("test_for_error"))
     print(my_playlist)
